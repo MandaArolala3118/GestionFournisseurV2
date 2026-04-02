@@ -1,0 +1,6 @@
+@Evaluation_fournisseur_version_actuel.Server_HostAddress = http://localhost:5079
+
+GET {{Evaluation_fournisseur_version_actuel.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
