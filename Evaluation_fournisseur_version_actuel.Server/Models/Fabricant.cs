@@ -11,7 +11,7 @@ public class Fabricant
     public int Id { get; set; }
 
     [Required]
-    [MaxLength(150)]
+    [MaxLength(500)]
     [Column("nom_fabricant")]
     public string NomFabricant { get; set; } = string.Empty;
 

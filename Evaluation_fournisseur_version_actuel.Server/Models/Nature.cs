@@ -11,7 +11,7 @@ public class Nature
     public int Id { get; set; }
 
     [Required]
-    [MaxLength(150)]
+    [MaxLength(500)]
     [Column("libel_nature")]
     public string LibelNature { get; set; } = string.Empty;
 

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\controllers\\categoriecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\controllers\\categoriecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -91,19 +95,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CategorieController.cs",
+              "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\CategorieController.cs",
+              "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\CategorieController.cs",
+              "ToolTip": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\CategorieController.cs*",
+              "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\CategorieController.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAB8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T11:29:23.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "LoginController.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\LoginController.cs",
               "ToolTip": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAABkBAAAAAAAAAAAAAB0BAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAiwB0BAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-02T10:48:38.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FournisseurCampagneController.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs",
@@ -116,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "20260402080447_CreationBase.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402080447_CreationBase.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402080447_CreationBase.cs",
@@ -129,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "20260402075013_CreationBase.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402075013_CreationBase.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402075013_CreationBase.cs",
@@ -142,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "20260402074731_InitialCreate.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402074731_InitialCreate.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402074731_InitialCreate.cs",
@@ -155,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Resultat.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Resultat.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Resultat.cs",
@@ -168,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Site.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Site.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Site.cs",
@@ -181,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Ponderation.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
@@ -194,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ResultatGlobalFournisseur.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\ResultatGlobalFournisseur.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\ResultatGlobalFournisseur.cs",
@@ -207,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Nature.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Nature.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Nature.cs",
@@ -220,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "NomFournisseur.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\NomFournisseur.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\NomFournisseur.cs",
@@ -233,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Fournisseur.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Fournisseur.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Fournisseur.cs",
@@ -246,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Fabricant.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Fabricant.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Fabricant.cs",
@@ -259,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Evaluation.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Evaluation.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Evaluation.cs",
@@ -272,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\appsettings.json",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\appsettings.json",
@@ -285,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Categorie.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Categorie.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Categorie.cs",
@@ -298,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Campagne.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Campagne.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Campagne.cs",
@@ -311,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Administrateur.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Administrateur.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Administrateur.cs",
@@ -324,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Program.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Program.cs",

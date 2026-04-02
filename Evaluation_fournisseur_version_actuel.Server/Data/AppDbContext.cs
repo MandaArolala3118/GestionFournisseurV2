@@ -81,7 +81,7 @@ namespace evaluation_fournisseur_version_actuel.Server.Data
                 entity.ToTable("eval_categorie");
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Id).HasColumnName("id_categorie");
-                entity.Property(e => e.NomCategorie).HasColumnName("nom_categorie").IsRequired().HasMaxLength(150);
+                entity.Property(e => e.NomCategorie).HasColumnName("nom_categorie").IsRequired().HasMaxLength(500);
                 entity.Property(e => e.Description).HasColumnName("description").HasMaxLength(500);
 
                 entity.HasMany(c => c.Fournisseurs)
@@ -161,7 +161,7 @@ namespace evaluation_fournisseur_version_actuel.Server.Data
                 entity.ToTable("eval_fabricant");
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Id).HasColumnName("id_fabricant");
-                entity.Property(e => e.NomFabricant).HasColumnName("nom_fabricant").IsRequired().HasMaxLength(150);
+                entity.Property(e => e.NomFabricant).HasColumnName("nom_fabricant").IsRequired().HasMaxLength(500);
 
                 entity.HasMany(f => f.Fournisseurs)
                       .WithOne(f => f.Fabricant)
@@ -222,7 +222,7 @@ namespace evaluation_fournisseur_version_actuel.Server.Data
                 entity.ToTable("eval_nature");
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Id).HasColumnName("id_nature");
-                entity.Property(e => e.LibelNature).HasColumnName("libel_nature").IsRequired().HasMaxLength(150);
+                entity.Property(e => e.LibelNature).HasColumnName("libel_nature").IsRequired().HasMaxLength(500);
 
                 entity.HasMany(n => n.Fournisseurs)
                       .WithOne(f => f.Nature)

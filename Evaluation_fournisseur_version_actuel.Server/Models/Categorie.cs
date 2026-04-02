@@ -11,7 +11,7 @@ public class Categorie
     public int Id { get; set; }
 
     [Required]
-    [MaxLength(150)]
+    [MaxLength(500)]
     [Column("nom_categorie")]
     public string NomCategorie { get; set; } = string.Empty;
 
