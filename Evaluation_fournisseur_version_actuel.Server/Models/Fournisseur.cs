@@ -29,7 +29,7 @@ public class Fournisseur
     [MaxLength(254)]
     [EmailAddress]
     [Column("email")]
-    public string? Email { get; set; }
+    public string Email { get; set; }
 
     [Column("emailEnvoye")]
     public bool EmailEnvoye { get; set; } = false;

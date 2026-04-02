@@ -33,7 +33,7 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
                         Id = c.Id,
                         NomCategorie = c.NomCategorie,
                         Description = c.Description,
-                        PonderationId = c.Ponderation.Id,
+                        PonderationId = c.Ponderation != null ? c.Ponderation.Id : (int?)null,
                         Ponderation = c.Ponderation != null ? new PonderationDto
                         {
                             Id = c.Ponderation.Id,
@@ -84,7 +84,7 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
                     Id = categorie.Id,
                     NomCategorie = categorie.NomCategorie,
                     Description = categorie.Description,
-                    PonderationId = categorie.Ponderation?.Id,
+                    PonderationId = categorie.Ponderation != null ? categorie.Ponderation.Id : (int?)null,
                     Ponderation = categorie.Ponderation != null ? new PonderationDto
                     {
                         Id = categorie.Ponderation.Id,
@@ -112,6 +112,101 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
             {
                 _logger.LogError(ex, "Erreur lors de la récupération de la catégorie avec ID {Id}", id);
                 return StatusCode(500, "Une erreur est survenue lors de la récupération de la catégorie");
+            }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<CategorieDto>> CreateCategorie([FromBody] CreateCategorieDto createCategorieDto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                var categorie = new Categorie
+                {
+                    NomCategorie = createCategorieDto.NomCategorie,
+                    Description = createCategorieDto.Description
+                };
+
+                _context.Categories.Add(categorie);
+                await _context.SaveChangesAsync();
+
+                var categorieDto = new CategorieDto
+                {
+                    Id = categorie.Id,
+                    NomCategorie = categorie.NomCategorie,
+                    Description = categorie.Description,
+                    PonderationId = categorie.Ponderation != null ? categorie.Ponderation.Id : null
+                };
+
+                return CreatedAtAction(nameof(GetCategorieById), new { id = categorie.Id }, categorieDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la création de la catégorie");
+                return StatusCode(500, "Une erreur est survenue lors de la création de la catégorie");
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCategorie(int id, [FromBody] UpdateCategorieDto updateCategorieDto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                var categorie = await _context.Categories.FindAsync(id);
+                if (categorie == null)
+                {
+                    return NotFound($"Catégorie avec ID {id} non trouvée");
+                }
+
+                categorie.NomCategorie = updateCategorieDto.NomCategorie;
+                categorie.Description = updateCategorieDto.Description;
+
+                _context.Categories.Update(categorie);
+                await _context.SaveChangesAsync();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la mise à jour de la catégorie avec ID {Id}", id);
+                return StatusCode(500, "Une erreur est survenue lors de la mise à jour de la catégorie");
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCategorie(int id)
+        {
+            try
+            {
+                var categorie = await _context.Categories.FindAsync(id);
+                if (categorie == null)
+                {
+                    return NotFound($"Catégorie avec ID {id} non trouvée");
+                }
+
+                _context.Categories.Remove(categorie);
+                await _context.SaveChangesAsync();
+
+                return NoContent();
+            }
+            catch (DbUpdateException ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la suppression de la catégorie avec ID {Id}", id);
+                return BadRequest("Impossible de supprimer cette catégorie car elle est utilisée par d'autres entités");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la suppression de la catégorie avec ID {Id}", id);
+                return StatusCode(500, "Une erreur est survenue lors de la suppression de la catégorie");
             }
         }
     }
