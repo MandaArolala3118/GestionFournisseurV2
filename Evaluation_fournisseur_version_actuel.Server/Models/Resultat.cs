@@ -15,14 +15,6 @@ public class Resultat
     [Column("nom_resultat")]
     public string NomResultat { get; set; } = string.Empty;
 
-    /// <summary>Borne inférieure du seuil (en %).</summary>
-    [Column("seuil_min")]
-    public double SeuilMin { get; set; }
-
-    /// <summary>Borne supérieure du seuil (en %).</summary>
-    [Column("seuil_max")]
-    public double SeuilMax { get; set; }
-
     [MaxLength(500)]
     [Column("observation")]
     public string? Observation { get; set; }

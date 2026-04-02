@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\controllers\\fournisseurcampagnecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\models\\ponderation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\models\\ponderation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\models\\nature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\models\\nature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\models\\resultatglobalfournisseur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\models\\resultatglobalfournisseur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\models\\ponderation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\models\\ponderation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\models\\nomfournisseur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,16 +90,16 @@
               "Title": "FournisseurCampagneController.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs",
-              "ToolTip": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs*",
-              "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs*",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAACoAAAA1AAAAAAAAAA==",
+              "ToolTip": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs",
+              "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAALcAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-02T08:36:44.259Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "20260402080447_CreationBase.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402080447_CreationBase.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402080447_CreationBase.cs",
@@ -112,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "20260402075013_CreationBase.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402075013_CreationBase.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402075013_CreationBase.cs",
@@ -125,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "20260402074731_InitialCreate.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402074731_InitialCreate.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402074731_InitialCreate.cs",
@@ -138,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Resultat.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Resultat.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Resultat.cs",
@@ -151,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Site.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Site.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Site.cs",
@@ -164,7 +164,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "Ponderation.cs",
+              "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
+              "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
+              "ToolTip": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
+              "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T07:44:31.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ResultatGlobalFournisseur.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\ResultatGlobalFournisseur.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\ResultatGlobalFournisseur.cs",
@@ -177,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Nature.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Nature.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Nature.cs",
@@ -186,19 +199,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-02T07:44:29.539Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Ponderation.cs",
-              "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
-              "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
-              "ToolTip": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
-              "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAqwEYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:44:31.991Z",
               "EditorCaption": ""
             },
             {
@@ -255,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\appsettings.json",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\appsettings.json",

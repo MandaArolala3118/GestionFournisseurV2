@@ -308,8 +308,6 @@ namespace evaluation_fournisseur_version_actuel.Server.Data
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Id).HasColumnName("id_resultat");
                 entity.Property(e => e.NomResultat).HasColumnName("nom_resultat").IsRequired().HasMaxLength(100);
-                entity.Property(e => e.SeuilMin).HasColumnName("seuil_min");
-                entity.Property(e => e.SeuilMax).HasColumnName("seuil_max");
                 entity.Property(e => e.Observation).HasColumnName("observation").HasMaxLength(500);
 
                 entity.HasMany(r => r.Evaluations)
