@@ -308,5 +308,225 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
                 return StatusCode(500, "Une erreur est survenue lors de la création du fournisseur");
             }
         }
+
+        [HttpPut("fournisseur/{id}")]
+        public async Task<IActionResult> UpdateFournisseur(int id, [FromBody] UpdateFournisseurDto updateFournisseurDto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                // Vérifier que l'utilisateur est administrateur
+                var userName = User.Identity?.Name;
+                if (string.IsNullOrEmpty(userName))
+                {
+                    return Unauthorized("Utilisateur non authentifié");
+                }
+
+                var shortUserName = userName.Contains('\\') 
+                    ? userName.Split('\\')[1] 
+                    : userName;
+
+                var administrateur = await _context.Administrateurs
+                    .FirstOrDefaultAsync(a => a.IdentiteUtilisateur.ToLower() == shortUserName.ToLower());
+
+                if (administrateur == null)
+                {
+                    return Forbid("Seul un administrateur peut modifier un fournisseur");
+                }
+
+                var fournisseur = await _context.Fournisseurs
+                    .Include(f => f.NomFournisseur)
+                    .FirstOrDefaultAsync(f => f.Id == id);
+
+                if (fournisseur == null)
+                {
+                    return NotFound($"Fournisseur avec ID {id} non trouvé");
+                }
+
+                // Vérifier que les entités de référence existent si fournies
+                if (updateFournisseurDto.CategorieId.HasValue)
+                {
+                    var categorie = await _context.Categories.FindAsync(updateFournisseurDto.CategorieId.Value);
+                    if (categorie == null)
+                    {
+                        return BadRequest($"Catégorie avec ID {updateFournisseurDto.CategorieId.Value} non trouvée");
+                    }
+                }
+
+                if (updateFournisseurDto.NatureId.HasValue)
+                {
+                    var nature = await _context.Natures.FindAsync(updateFournisseurDto.NatureId.Value);
+                    if (nature == null)
+                    {
+                        return BadRequest($"Nature avec ID {updateFournisseurDto.NatureId.Value} non trouvée");
+                    }
+                }
+
+                if (updateFournisseurDto.SiteId.HasValue)
+                {
+                    var site = await _context.Sites.FindAsync(updateFournisseurDto.SiteId.Value);
+                    if (site == null)
+                    {
+                        return BadRequest($"Site avec ID {updateFournisseurDto.SiteId.Value} non trouvé");
+                    }
+                }
+
+                if (updateFournisseurDto.FabricantId.HasValue)
+                {
+                    var fabricant = await _context.Fabricants.FindAsync(updateFournisseurDto.FabricantId.Value);
+                    if (fabricant == null)
+                    {
+                        return BadRequest($"Fabricant avec ID {updateFournisseurDto.FabricantId.Value} non trouvé");
+                    }
+                }
+
+                // Mettre à jour le NomFournisseur si fourni
+                if (updateFournisseurDto.NomFournisseur != null)
+                {
+                    var nomFournisseur = fournisseur.NomFournisseur;
+                    
+                    // Mettre à jour les propriétés du NomFournisseur
+                    if (updateFournisseurDto.NomFournisseur.VendorNumber != null)
+                        nomFournisseur.VendorNumber = updateFournisseurDto.NomFournisseur.VendorNumber;
+                    
+                    if (updateFournisseurDto.NomFournisseur.VendorName != null)
+                        nomFournisseur.VendorName = updateFournisseurDto.NomFournisseur.VendorName;
+                    
+                    if (updateFournisseurDto.NomFournisseur.CompanyCode != null)
+                        nomFournisseur.CompanyCode = updateFournisseurDto.NomFournisseur.CompanyCode;
+                    
+                    if (updateFournisseurDto.NomFournisseur.ApDivision != null)
+                        nomFournisseur.ApDivision = updateFournisseurDto.NomFournisseur.ApDivision;
+                    
+                    if (updateFournisseurDto.NomFournisseur.StrClassStatus != null)
+                        nomFournisseur.StrClassStatus = updateFournisseurDto.NomFournisseur.StrClassStatus;
+                    
+                    if (updateFournisseurDto.NomFournisseur.SysCodeDescription != null)
+                        nomFournisseur.SysCodeDescription = updateFournisseurDto.NomFournisseur.SysCodeDescription;
+                    
+                    if (updateFournisseurDto.NomFournisseur.SignificationCompanyCode != null)
+                        nomFournisseur.SignificationCompanyCode = updateFournisseurDto.NomFournisseur.SignificationCompanyCode;
+                    
+                    if (updateFournisseurDto.NomFournisseur.SignificationApDivision != null)
+                        nomFournisseur.SignificationApDivision = updateFournisseurDto.NomFournisseur.SignificationApDivision;
+                    
+                    if (updateFournisseurDto.NomFournisseur.StrVendorClass != null)
+                        nomFournisseur.StrVendorClass = updateFournisseurDto.NomFournisseur.StrVendorClass;
+                    
+                    if (updateFournisseurDto.NomFournisseur.CreditTermsCode != null)
+                        nomFournisseur.CreditTermsCode = updateFournisseurDto.NomFournisseur.CreditTermsCode;
+                    
+                    if (updateFournisseurDto.NomFournisseur.CampagneId.HasValue)
+                        nomFournisseur.CampagneId = updateFournisseurDto.NomFournisseur.CampagneId.Value;
+
+                    _context.NomFournisseurs.Update(nomFournisseur);
+                }
+
+                // Mettre à jour le fournisseur
+                if (updateFournisseurDto.FabricantId.HasValue)
+                    fournisseur.FabricantId = updateFournisseurDto.FabricantId.Value;
+                
+                if (updateFournisseurDto.CategorieId.HasValue)
+                    fournisseur.CategorieId = updateFournisseurDto.CategorieId.Value;
+                
+                if (updateFournisseurDto.NatureId.HasValue)
+                    fournisseur.NatureId = updateFournisseurDto.NatureId.Value;
+                
+                if (updateFournisseurDto.SiteId.HasValue)
+                    fournisseur.SiteId = updateFournisseurDto.SiteId.Value;
+                
+                if (updateFournisseurDto.Email != null)
+                    fournisseur.Email = updateFournisseurDto.Email;
+
+                _context.Fournisseurs.Update(fournisseur);
+                await _context.SaveChangesAsync();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la mise à jour du fournisseur avec ID {Id}", id);
+                return StatusCode(500, "Une erreur est survenue lors de la mise à jour du fournisseur");
+            }
+        }
+
+        [HttpDelete("fournisseur/{id}")]
+        public async Task<IActionResult> DeleteFournisseur(int id)
+        {
+            try
+            {
+                // Vérifier que l'utilisateur est administrateur
+                var userName = User.Identity?.Name;
+                if (string.IsNullOrEmpty(userName))
+                {
+                    return Unauthorized("Utilisateur non authentifié");
+                }
+
+                var shortUserName = userName.Contains('\\') 
+                    ? userName.Split('\\')[1] 
+                    : userName;
+
+                var administrateur = await _context.Administrateurs
+                    .FirstOrDefaultAsync(a => a.IdentiteUtilisateur.ToLower() == shortUserName.ToLower());
+
+                if (administrateur == null)
+                {
+                    return Forbid("Seul un administrateur peut supprimer un fournisseur");
+                }
+
+                var fournisseur = await _context.Fournisseurs
+                    .Include(f => f.Evaluations)
+                    .Include(f => f.NomFournisseur)
+                    .FirstOrDefaultAsync(f => f.Id == id);
+
+                if (fournisseur == null)
+                {
+                    return NotFound($"Fournisseur avec ID {id} non trouvé");
+                }
+
+                // Vérifier si le fournisseur a des évaluations
+                if (fournisseur.Evaluations.Any())
+                {
+                    return BadRequest("Impossible de supprimer ce fournisseur car il a des évaluations associées");
+                }
+
+                var nomFournisseurId = fournisseur.NomFournisseurId;
+
+                // Supprimer le fournisseur
+                _context.Fournisseurs.Remove(fournisseur);
+                await _context.SaveChangesAsync();
+
+                // Vérifier si le NomFournisseur est utilisé par d'autres fournisseurs
+                var autresFournisseurs = await _context.Fournisseurs
+                    .AnyAsync(f => f.NomFournisseurId == nomFournisseurId);
+
+                if (!autresFournisseurs)
+                {
+                    // Supprimer le NomFournisseur s'il n'est plus utilisé
+                    var nomFournisseur = await _context.NomFournisseurs.FindAsync(nomFournisseurId);
+                    if (nomFournisseur != null)
+                    {
+                        _context.NomFournisseurs.Remove(nomFournisseur);
+                        await _context.SaveChangesAsync();
+                    }
+                }
+
+                return NoContent();
+            }
+            catch (DbUpdateException ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la suppression du fournisseur avec ID {Id}", id);
+                return BadRequest("Impossible de supprimer ce fournisseur car il est utilisé par d'autres entités");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la suppression du fournisseur avec ID {Id}", id);
+                return StatusCode(500, "Une erreur est survenue lors de la suppression du fournisseur");
+            }
+        }
     }
 }
