@@ -328,6 +328,118 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
             }
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateEvaluation(int id, [FromBody] UpdateEvaluationDto updateEvaluationDto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                var evaluation = await _context.Evaluations.FindAsync(id);
+                if (evaluation == null)
+                {
+                    return NotFound($"Évaluation avec ID {id} non trouvée");
+                }
+
+                // Récupérer la pondération actuelle pour recalculer la moyenne
+                var ponderation = await _context.Ponderations.FindAsync(evaluation.PonderationId);
+                if (ponderation == null)
+                {
+                    return BadRequest($"Pondération associée à l'évaluation non trouvée");
+                }
+
+                // Mettre à jour les propriétés si fournies
+                if (updateEvaluationDto.CampagneId.HasValue)
+                {
+                    // Vérifier que la nouvelle campagne existe
+                    var campagne = await _context.Campagnes.FindAsync(updateEvaluationDto.CampagneId.Value);
+                    if (campagne == null)
+                    {
+                        return BadRequest($"Campagne avec ID {updateEvaluationDto.CampagneId.Value} non trouvée");
+                    }
+                    evaluation.CampagneId = updateEvaluationDto.CampagneId.Value;
+                }
+
+                // Mettre à jour les notes si fournies
+                if (updateEvaluationDto.ITransparence.HasValue)
+                    evaluation.ITransparence = updateEvaluationDto.ITransparence.Value;
+                
+                if (updateEvaluationDto.IIFacture.HasValue)
+                    evaluation.IIFacture = updateEvaluationDto.IIFacture.Value;
+                
+                if (updateEvaluationDto.IIINotoriete.HasValue)
+                    evaluation.IIINotoriete = updateEvaluationDto.IIINotoriete.Value;
+                
+                if (updateEvaluationDto.IVPreventionCorruption.HasValue)
+                    evaluation.IVPreventionCorruption = updateEvaluationDto.IVPreventionCorruption.Value;
+                
+                if (updateEvaluationDto.VPreventionDroitHomme.HasValue)
+                    evaluation.VPreventionDroitHomme = updateEvaluationDto.VPreventionDroitHomme.Value;
+                
+                if (updateEvaluationDto.VIConformiteVsExigence.HasValue)
+                    evaluation.VIConformiteVsExigence = updateEvaluationDto.VIConformiteVsExigence.Value;
+                
+                if (updateEvaluationDto.VIIDelaiLivraison.HasValue)
+                    evaluation.VIIDelaiLivraison = updateEvaluationDto.VIIDelaiLivraison.Value;
+                
+                if (updateEvaluationDto.VIIICommunication.HasValue)
+                    evaluation.VIIICommunication = updateEvaluationDto.VIIICommunication.Value;
+                
+                if (updateEvaluationDto.IXDisponibiliteDocuments.HasValue)
+                    evaluation.IXDisponibiliteDocuments = updateEvaluationDto.IXDisponibiliteDocuments.Value;
+                
+                if (updateEvaluationDto.XConsigneQhse.HasValue)
+                    evaluation.XConsigneQhse = updateEvaluationDto.XConsigneQhse.Value;
+                
+                if (updateEvaluationDto.XIQualitePrix.HasValue)
+                    evaluation.XIQualitePrix = updateEvaluationDto.XIQualitePrix.Value;
+                
+                if (updateEvaluationDto.XIIDureePaiement.HasValue)
+                    evaluation.XIIDureePaiement = updateEvaluationDto.XIIDureePaiement.Value;
+                
+                if (updateEvaluationDto.XIIIConformiteFiscale.HasValue)
+                    evaluation.XIIIConformiteFiscale = updateEvaluationDto.XIIIConformiteFiscale.Value;
+
+                // Mettre à jour les autres propriétés si fournies
+                if (updateEvaluationDto.Observation != null)
+                    evaluation.Observation = updateEvaluationDto.Observation;
+                
+                if (updateEvaluationDto.PropositionAmelioration != null)
+                    evaluation.PropositionAmelioration = updateEvaluationDto.PropositionAmelioration;
+                
+                if (updateEvaluationDto.ObservationsFournisseur != null)
+                    evaluation.ObservationsFournisseur = updateEvaluationDto.ObservationsFournisseur;
+                
+                if (updateEvaluationDto.Responsable != null)
+                    evaluation.Responsable = updateEvaluationDto.Responsable;
+                
+                if (updateEvaluationDto.NumeroActionPac != null)
+                    evaluation.NumeroActionPac = updateEvaluationDto.NumeroActionPac;
+                
+                if (updateEvaluationDto.Deadline.HasValue)
+                    evaluation.Deadline = updateEvaluationDto.Deadline.Value;
+
+                // Recalculer la moyenne
+                evaluation.RecalculerMoyenne(ponderation);
+
+                // Recalculer automatiquement le résultat
+                evaluation.ResultatId = evaluation.CalculerResultatId();
+
+                _context.Evaluations.Update(evaluation);
+                await _context.SaveChangesAsync();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la mise à jour de l'évaluation avec ID {Id}", id);
+                return StatusCode(500, "Une erreur est survenue lors de la mise à jour de l'évaluation");
+            }
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<EvaluationDto>> GetEvaluationById(int id)
         {
