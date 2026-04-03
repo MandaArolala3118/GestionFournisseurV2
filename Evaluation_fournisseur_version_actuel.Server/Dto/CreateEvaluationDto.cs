@@ -7,13 +7,8 @@ namespace evaluation_fournisseur_version_actuel.Server.Dto
         [Required(ErrorMessage = "Le fournisseur est requis")]
         public int FournisseurId { get; set; }
 
-        [Required(ErrorMessage = "La pondération est requise")]
-        public int PonderationId { get; set; }
-
         [Required(ErrorMessage = "La campagne est requise")]
         public int CampagneId { get; set; }
-
-        public int? ResultatId { get; set; }
 
         [Range(0, 5, ErrorMessage = "La note doit être entre 0 et 5")]
         public double? ITransparence { get; set; }

@@ -200,17 +200,20 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
                 }
 
                 // Vérifier que le fournisseur existe
-                var fournisseur = await _context.Fournisseurs.FindAsync(createEvaluationDto.FournisseurId);
+                var fournisseur = await _context.Fournisseurs
+                    .Include(f => f.Categorie)
+                    .ThenInclude(c => c.Ponderation)
+                    .FirstOrDefaultAsync(f => f.Id == createEvaluationDto.FournisseurId);
+
                 if (fournisseur == null)
                 {
                     return NotFound($"Fournisseur avec ID {createEvaluationDto.FournisseurId} non trouvé");
                 }
 
-                // Vérifier que la pondération existe
-                var ponderation = await _context.Ponderations.FindAsync(createEvaluationDto.PonderationId);
-                if (ponderation == null)
+                // Vérifier que la catégorie a une pondération
+                if (fournisseur.Categorie?.Ponderation == null)
                 {
-                    return NotFound($"Pondération avec ID {createEvaluationDto.PonderationId} non trouvée");
+                    return BadRequest($"La catégorie du fournisseur n'a pas de pondération associée");
                 }
 
                 // Vérifier que la campagne existe
@@ -220,13 +223,14 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
                     return NotFound($"Campagne avec ID {createEvaluationDto.CampagneId} non trouvée");
                 }
 
+                var ponderation = fournisseur.Categorie.Ponderation;
+
                 // Créer l'évaluation
                 var evaluation = new Evaluation
                 {
                     FournisseurId = createEvaluationDto.FournisseurId,
-                    PonderationId = createEvaluationDto.PonderationId,
-                    CampagneId = createEvaluationDto.CampagneId,
-                    ResultatId = createEvaluationDto.ResultatId,
+                    PonderationId = ponderation.Id,
+                    CampagneId = campagne.Id,
                     ITransparence = createEvaluationDto.ITransparence,
                     IIFacture = createEvaluationDto.IIFacture,
                     IIINotoriete = createEvaluationDto.IIINotoriete,
@@ -252,11 +256,8 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
                 // Calculer la moyenne
                 evaluation.RecalculerMoyenne(ponderation);
 
-                // Calculer automatiquement le résultat si non fourni
-                if (!createEvaluationDto.ResultatId.HasValue)
-                {
-                    evaluation.ResultatId = evaluation.CalculerResultatId();
-                }
+                // Calculer automatiquement le résultat
+                evaluation.ResultatId = evaluation.CalculerResultatId();
 
                 _context.Evaluations.Add(evaluation);
                 await _context.SaveChangesAsync();
