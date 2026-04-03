@@ -38,8 +38,8 @@ namespace evaluation_fournisseur_version_actuel.Server.Services
                 double moyenneGlobale = evaluations.Average(e => e.MoyennePct ?? 0);
 
                 // Déterminer le résultat global
-                string resultatGlobal = moyenneGlobale >= 75 ? "Conforme" : 
-                                   moyenneGlobale >= 50 ? "Partiellement conforme" : "Non conforme";
+                string resultatGlobal = moyenneGlobale >= 75 ? "SATISFAISANT" : 
+                                   moyenneGlobale >= 50 ? "SOUS RESERVE" : "NON SATISFAISANT";
 
                 // Récupérer le fournisseur et la campagne
                 var fournisseur = evaluations.First().Fournisseur;
