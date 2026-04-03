@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\controllers\\fournisseurcampagnecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\controllers\\fournisseurcampagnecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\controllers\\categoriecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\controllers\\categoriecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\controllers\\fournisseurcampagnecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\controllers\\fournisseurcampagnecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\controllers\\ponderationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\controllers\\ponderationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\models\\nature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\models\\nature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402080447_CreationBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402080447_CreationBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402075013_CreationBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,6 +81,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|d:\\projet\\fournisseur\\evaluation_fournisseur_version_actuel\\evaluation_fournisseur_version_actuel.server\\migrations\\20260402080447_creationbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8715B4F5-9E7E-4B1A-A2C2-02148985936B}|Evaluation_fournisseur_version_actuel.Server\\Evaluation_fournisseur_version_actuel.Server.csproj|solutionrelative:evaluation_fournisseur_version_actuel.server\\migrations\\20260402080447_creationbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,24 +94,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "PonderationController.cs",
+              "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\PonderationController.cs",
+              "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\PonderationController.cs",
+              "ToolTip": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\PonderationController.cs",
+              "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\PonderationController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGYAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T04:39:22.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CategorieController.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\CategorieController.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\CategorieController.cs",
               "ToolTip": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\CategorieController.cs",
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\CategorieController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAqwCIAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAAAI0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-02T11:29:23.868Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LoginController.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\LoginController.cs",
@@ -115,25 +132,24 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\LoginController.cs",
               "ViewState": "AgIAAJYAAAAAAAAAAAAiwB0BAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T10:48:38.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T10:48:38.882Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FournisseurCampagneController.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs",
               "ToolTip": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs",
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Controllers\\FournisseurCampagneController.cs",
-              "ViewState": "AgIAANkAAAAAAAAAAAAAAOkAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAAALkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-02T08:36:44.259Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 20,
               "Title": "20260402080447_CreationBase.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402080447_CreationBase.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402080447_CreationBase.cs",
@@ -141,8 +157,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402080447_CreationBase.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAgwE4AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T08:04:48.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T08:04:48.209Z"
             },
             {
               "$type": "Document",
@@ -154,8 +169,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402075013_CreationBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:50:14.191Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:50:14.191Z"
             },
             {
               "$type": "Document",
@@ -167,8 +181,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Migrations\\20260402074731_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:47:35.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:47:35.233Z"
             },
             {
               "$type": "Document",
@@ -180,8 +193,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Resultat.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:44:36.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:44:36.347Z"
             },
             {
               "$type": "Document",
@@ -193,12 +205,11 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Site.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:44:34.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:44:34.884Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Ponderation.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
@@ -206,8 +217,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Ponderation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:44:31.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:44:31.991Z"
             },
             {
               "$type": "Document",
@@ -219,12 +229,11 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\ResultatGlobalFournisseur.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:44:33.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:44:33.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Nature.cs",
               "DocumentMoniker": "D:\\projet\\fournisseur\\Evaluation_fournisseur_version_actuel\\Evaluation_fournisseur_version_actuel.Server\\Models\\Nature.cs",
               "RelativeDocumentMoniker": "Evaluation_fournisseur_version_actuel.Server\\Models\\Nature.cs",
@@ -232,8 +241,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Nature.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:44:29.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:44:29.539Z"
             },
             {
               "$type": "Document",
@@ -245,8 +253,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\NomFournisseur.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:44:23.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:44:23.726Z"
             },
             {
               "$type": "Document",
@@ -258,8 +265,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Fournisseur.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:43:25.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:43:25.051Z"
             },
             {
               "$type": "Document",
@@ -271,8 +277,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Fabricant.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:43:18.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:43:18.701Z"
             },
             {
               "$type": "Document",
@@ -284,8 +289,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Evaluation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:43:15.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:43:15.815Z"
             },
             {
               "$type": "Document",
@@ -297,8 +301,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-02T07:31:03.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:31:03.381Z"
             },
             {
               "$type": "Document",
@@ -310,8 +313,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Categorie.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:43:11.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:43:11.349Z"
             },
             {
               "$type": "Document",
@@ -323,8 +325,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Campagne.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:43:05.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:43:05.669Z"
             },
             {
               "$type": "Document",
@@ -336,8 +337,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Models\\Administrateur.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:29:57.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:29:57.205Z"
             },
             {
               "$type": "Document",
@@ -349,8 +349,7 @@
               "RelativeToolTip": "Evaluation_fournisseur_version_actuel.Server\\Program.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAAABIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T07:19:55.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-02T07:19:55.937Z"
             }
           ]
         }

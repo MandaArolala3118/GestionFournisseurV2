@@ -137,4 +137,18 @@ public class Evaluation
 
         MoyennePct = score / (5.0 * 100.0) * 100.0;
     }
+
+    /// <summary>
+    /// Calcule l'ID du résultat en fonction de la moyenne en pourcentage.
+    /// </summary>
+    /// <returns>ID du résultat: 3 si < 50, 2 si 50-75, 1 si >= 75</returns>
+    public int CalculerResultatId()
+    {
+        if (MoyennePct < 50)
+            return 3; // Résultat non conforme
+        else if (MoyennePct < 75)
+            return 2; // Résultat partiellement conforme
+        else
+            return 1; // Résultat conforme
+    }
 }

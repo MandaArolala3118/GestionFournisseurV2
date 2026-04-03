@@ -28,7 +28,7 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
             {
                 var categories = await _context.Categories
                     .Include(c => c.Ponderation)
-                    .Select(c => new CategorieDto
+                    .Select(c => new CategorieWithPonderationDto
                     {
                         Id = c.Id,
                         NomCategorie = c.NomCategorie,
@@ -66,7 +66,7 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<CategorieDto>> GetCategorieById(int id)
+        public async Task<ActionResult<CategorieWithPonderationDto>> GetCategorieById(int id)
         {
             try
             {
@@ -79,7 +79,7 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
                     return NotFound($"Catégorie avec ID {id} non trouvée");
                 }
 
-                var categorieDto = new CategorieDto
+                var categorieDto = new CategorieWithPonderationDto
                 {
                     Id = categorie.Id,
                     NomCategorie = categorie.NomCategorie,
