@@ -86,8 +86,8 @@ namespace Evaluation_fournisseur_version_actuel.Server.Migrations
 
                     b.Property<string>("NomCategorie")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
                         .HasColumnName("nom_categorie");
 
                     b.HasKey("Id");
@@ -231,8 +231,8 @@ namespace Evaluation_fournisseur_version_actuel.Server.Migrations
 
                     b.Property<string>("NomFabricant")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
                         .HasColumnName("nom_fabricant");
 
                     b.HasKey("Id");
@@ -258,6 +258,7 @@ namespace Evaluation_fournisseur_version_actuel.Server.Migrations
                         .HasColumnName("dateEnvoiEmail");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasMaxLength(254)
                         .HasColumnType("nvarchar(254)")
                         .HasColumnName("email");
@@ -308,8 +309,8 @@ namespace Evaluation_fournisseur_version_actuel.Server.Migrations
 
                     b.Property<string>("LibelNature")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
                         .HasColumnName("libel_nature");
 
                     b.HasKey("Id");
@@ -482,14 +483,6 @@ namespace Evaluation_fournisseur_version_actuel.Server.Migrations
                         .HasColumnType("nvarchar(500)")
                         .HasColumnName("observation");
 
-                    b.Property<double>("SeuilMax")
-                        .HasColumnType("float")
-                        .HasColumnName("seuil_max");
-
-                    b.Property<double>("SeuilMin")
-                        .HasColumnType("float")
-                        .HasColumnName("seuil_min");
-
                     b.HasKey("Id");
 
                     b.ToTable("eval_resultat", (string)null);
@@ -497,39 +490,48 @@ namespace Evaluation_fournisseur_version_actuel.Server.Migrations
 
             modelBuilder.Entity("evaluation_fournisseur_version_actuel.Server.Models.ResultatGlobalFournisseur", b =>
                 {
-                    b.Property<short>("Annee")
-                        .HasColumnType("smallint");
-
                     b.Property<int>("FournisseurId")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("FournisseurId");
+
+                    b.Property<short>("Annee")
+                        .HasColumnType("smallint")
+                        .HasColumnName("Annee");
 
                     b.Property<double?>("MoyenneGlobalePct")
-                        .HasColumnType("float");
+                        .HasColumnType("float")
+                        .HasColumnName("MoyenneGlobalePct");
 
                     b.Property<int>("NbreEvaluations")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("NbreEvaluations");
 
                     b.Property<string>("NomCampagne")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("NomCampagne");
 
                     b.Property<string>("ResultatGlobal")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("ResultatGlobal");
 
                     b.Property<string>("ResultatGlobalCalcule")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("ResultatGlobalCalcule");
 
                     b.Property<string>("VendorName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("VendorName");
 
                     b.Property<string>("VendorNumber")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("VendorNumber");
+
+                    b.HasKey("FournisseurId", "Annee");
 
                     b.ToTable("v_ResultatGlobal_Fournisseur", (string)null);
-
-                    b.ToView("v_ResultatGlobal_Fournisseur", (string)null);
                 });
 
             modelBuilder.Entity("evaluation_fournisseur_version_actuel.Server.Models.Site", b =>

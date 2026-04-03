@@ -340,6 +340,16 @@ namespace evaluation_fournisseur_version_actuel.Server.Data
                 entity.ToTable("v_ResultatGlobal_Fournisseur");
                 entity.HasNoKey();
                 entity.ToView("v_ResultatGlobal_Fournisseur");
+                
+                entity.Property(e => e.FournisseurId).HasColumnName("FournisseurId");
+                entity.Property(e => e.Annee).HasColumnName("Annee");
+                entity.Property(e => e.VendorNumber).HasColumnName("VendorNumber");
+                entity.Property(e => e.VendorName).HasColumnName("VendorName");
+                entity.Property(e => e.NomCampagne).HasColumnName("NomCampagne");
+                entity.Property(e => e.NbreEvaluations).HasColumnName("NbreEvaluations");
+                entity.Property(e => e.MoyenneGlobalePct).HasColumnName("MoyenneGlobalePct");
+                entity.Property(e => e.ResultatGlobal).HasColumnName("ResultatGlobal");
+                entity.Property(e => e.ResultatGlobalCalcule).HasColumnName("ResultatGlobalCalcule");
             });
         }
     }

@@ -5,6 +5,7 @@ using evaluation_fournisseur_version_actuel.Server.Models;
 using evaluation_fournisseur_version_actuel.Server.Data;
 using evaluation_fournisseur_version_actuel.Server.Dto;
 using evaluation_fournisseur_version_actuel.Server.Dto.Statistiques;
+using evaluation_fournisseur_version_actuel.Server.Services;
 
 namespace Evaluation_fournisseur_version_actuel.Server.Controllers
 {
@@ -15,11 +16,13 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
     {
         private readonly AppDbContext _context;
         private readonly ILogger<EvaluationController> _logger;
+        private readonly ResultatGlobalService _resultatGlobalService;
 
-        public EvaluationController(AppDbContext context, ILogger<EvaluationController> logger)
+        public EvaluationController(AppDbContext context, ILogger<EvaluationController> logger, ResultatGlobalService resultatGlobalService)
         {
             _context = context;
             _logger = logger;
+            _resultatGlobalService = resultatGlobalService;
         }
 
         [HttpGet("statistiques-campagne-active")]
@@ -262,6 +265,9 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
                 _context.Evaluations.Add(evaluation);
                 await _context.SaveChangesAsync();
 
+                // Mettre à jour le résultat global du fournisseur
+                await _resultatGlobalService.UpdateResultatGlobalAsync(evaluation.FournisseurId, campagne.Annee);
+
                 // Créer le DTO de retour
                 var evaluationDto = new EvaluationDto
                 {
@@ -431,12 +437,111 @@ namespace Evaluation_fournisseur_version_actuel.Server.Controllers
                 _context.Evaluations.Update(evaluation);
                 await _context.SaveChangesAsync();
 
+                // Mettre à jour le résultat global du fournisseur
+                var campagneResultat = await _context.Campagnes.FindAsync(evaluation.CampagneId);
+                if (campagneResultat != null)
+                {
+                    await _resultatGlobalService.UpdateResultatGlobalAsync(evaluation.FournisseurId, campagneResultat.Annee);
+                }
+
                 return NoContent();
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Erreur lors de la mise à jour de l'évaluation avec ID {Id}", id);
                 return StatusCode(500, "Une erreur est survenue lors de la mise à jour de l'évaluation");
+            }
+        }
+
+        [HttpGet("resultats-globaux")]
+        public async Task<ActionResult<IEnumerable<ResultatGlobalFournisseurDto>>> GetResultatsGlobaux()
+        {
+            try
+            {
+                var resultatsGlobaux = await _context.ResultatGlobalFournisseurs
+                    .ToListAsync();
+
+                var resultatsDto = resultatsGlobaux.Select(rg => new ResultatGlobalFournisseurDto
+                {
+                    FournisseurId = rg.FournisseurId,
+                    VendorNumber = rg.VendorNumber,
+                    VendorName = rg.VendorName,
+                    Annee = rg.Annee,
+                    NomCampagne = rg.NomCampagne,
+                    NbreEvaluations = rg.NbreEvaluations,
+                    MoyenneGlobalePct = rg.MoyenneGlobalePct,
+                    ResultatGlobal = rg.ResultatGlobal,
+                    ResultatGlobalCalcule = rg.ResultatGlobalCalcule
+                });
+
+                return Ok(resultatsDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la récupération des résultats globaux");
+                return StatusCode(500, "Une erreur est survenue lors de la récupération des résultats globaux");
+            }
+        }
+
+        [HttpGet("resultats-globaux/fournisseur/{fournisseurId}")]
+        public async Task<ActionResult<IEnumerable<ResultatGlobalFournisseurDto>>> GetResultatsGlobauxByFournisseur(int fournisseurId)
+        {
+            try
+            {
+                var resultatsGlobaux = await _context.ResultatGlobalFournisseurs
+                    .Where(rg => rg.FournisseurId == fournisseurId)
+                    .ToListAsync();
+
+                var resultatsDto = resultatsGlobaux.Select(rg => new ResultatGlobalFournisseurDto
+                {
+                    FournisseurId = rg.FournisseurId,
+                    VendorNumber = rg.VendorNumber,
+                    VendorName = rg.VendorName,
+                    Annee = rg.Annee,
+                    NomCampagne = rg.NomCampagne,
+                    NbreEvaluations = rg.NbreEvaluations,
+                    MoyenneGlobalePct = rg.MoyenneGlobalePct,
+                    ResultatGlobal = rg.ResultatGlobal,
+                    ResultatGlobalCalcule = rg.ResultatGlobalCalcule
+                });
+
+                return Ok(resultatsDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la récupération des résultats globaux pour le fournisseur {FournisseurId}", fournisseurId);
+                return StatusCode(500, "Une erreur est survenue lors de la récupération des résultats globaux");
+            }
+        }
+
+        [HttpGet("resultats-globaux/annee/{annee}")]
+        public async Task<ActionResult<IEnumerable<ResultatGlobalFournisseurDto>>> GetResultatsGlobauxByAnnee(short annee)
+        {
+            try
+            {
+                var resultatsGlobaux = await _context.ResultatGlobalFournisseurs
+                    .Where(rg => rg.Annee == annee)
+                    .ToListAsync();
+
+                var resultatsDto = resultatsGlobaux.Select(rg => new ResultatGlobalFournisseurDto
+                {
+                    FournisseurId = rg.FournisseurId,
+                    VendorNumber = rg.VendorNumber,
+                    VendorName = rg.VendorName,
+                    Annee = rg.Annee,
+                    NomCampagne = rg.NomCampagne,
+                    NbreEvaluations = rg.NbreEvaluations,
+                    MoyenneGlobalePct = rg.MoyenneGlobalePct,
+                    ResultatGlobal = rg.ResultatGlobal,
+                    ResultatGlobalCalcule = rg.ResultatGlobalCalcule
+                });
+
+                return Ok(resultatsDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la récupération des résultats globaux pour l'année {Annee}", annee);
+                return StatusCode(500, "Une erreur est survenue lors de la récupération des résultats globaux");
             }
         }
 

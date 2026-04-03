@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Negotiate;
 using Microsoft.EntityFrameworkCore;
 using evaluation_fournisseur_version_actuel.Server.Data;
+using evaluation_fournisseur_version_actuel.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,9 @@ builder.Services.AddAuthorization(options =>
     // By default, all incoming requests will be authorized according to the default policy.
     options.FallbackPolicy = options.DefaultPolicy;
 });
+
+// Enregistrement des services personnalisés
+builder.Services.AddScoped<ResultatGlobalService>();
 
 var app = builder.Build();
 
